@@ -12,9 +12,15 @@ jobs:
     steps:
       - shell: bash
       - run: 
-          expr 3 + 7 > cal.txt
+          cal 2022 > cal.txt
+      - name: Upload the cal.txt file
+        uses: actions/upload-artifact@v3
+        with:
+          name: calendar
+          path: calendar.txt
   job_2:
     runs-on: windows-latest
+  
   job_3:
     runs-on: macOS-latest
     
