@@ -22,12 +22,12 @@ jobs:
       windows-latest
     steps:
       - name: Display env variables
-      - run: echo "Hi ${{firstName}}"
-      - run: echo "Hi ${{lastName}}"
-      - run: echo "${{firstName}} having ${{job}}"
+      - run: echo "Hi ${{env.firstName}}"
+      - run: echo "Hi ${{env.lastName}}"
+      - run: echo "${{env.firstName}} having ${{env.job}}"
   ubuntu_job:
     runs-on:
       ubuntu-latest
     steps:
       - name: Display env variables
-      - run: echo "Hi ${{lastName}}"
+      - run: echo "Hi ${{env.lastName}}"
