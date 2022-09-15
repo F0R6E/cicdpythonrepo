@@ -21,8 +21,14 @@ jobs:
     runs-on:
       windows-latest
     steps:
-      - name: Display env variables
+      - name: Display firstName variable
         run: echo "Hi ${{env.firstName}}"
+      - name: Display lastName variable
+        run: echo "Hi ${{env.lastName}}"
+      - name: Display job
+        run: echo "${{job}}"
+        env:
+          job: "Developer"
         
   ubuntu_job:
     runs-on:
