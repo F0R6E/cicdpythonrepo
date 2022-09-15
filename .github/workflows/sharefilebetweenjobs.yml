@@ -11,16 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - shell: bash
-      - run: 
-          cal 2022 > cal.txt
+        run: 
+          cal 2022 > calendar.txt
       - name: Upload the cal.txt file
         uses: actions/upload-artifact@v3
         with:
           name: calendar
           path: calendar.txt
-  job_2:
-    runs-on: windows-latest
-  
-  job_3:
-    runs-on: macOS-latest
+ 
     
